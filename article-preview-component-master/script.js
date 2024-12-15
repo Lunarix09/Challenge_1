@@ -32,7 +32,6 @@ document.addEventListener("click", (e) => {
             }, 600);  
         }
         document.querySelector(".share").disabled= false;    
-
     }
 });
 
@@ -45,21 +44,19 @@ function show_popup(mediaQuery) {
 
         document.querySelector(".popup_1").classList.add("fadeIn1");
 
+        document.querySelector(".infos").style.display ="none";
         document.querySelector(".popup").style.display ="none";
         
         setTimeout(() => {
             document.querySelector(".right_side .share").style.display ="none";
-            
 
             document.querySelector(".popup_1 .share img").src= "images/icon-share_1.png";
 
             document.querySelector(".right_side").style.borderRadius = "0";            
         }, 20);
     }
-        
 };
 document.querySelector(".right_side .share").addEventListener("click", () => show_popup(mediaQuery));
-
 
 document.addEventListener("click", (e) => {
     if (!e.target.closest(".popup_1") && !e.target.closest(".share")) {
@@ -72,11 +69,11 @@ document.addEventListener("click", (e) => {
                  document.querySelector(".popup_1").style.display ="none";
                 document.querySelector(".right_side .share").style.display ="block";
                 document.querySelector(".popup_1").classList.remove("fadeOut1", "fadeIn1");
+                document.querySelector(".infos").style.display ="flex";
             }, 600);
         } 
         if (mediaQuery.matches) {
            document.querySelector(".right_side").style.borderRadius = "0 0 16px 16px";
         }   
-        
     }
 });
