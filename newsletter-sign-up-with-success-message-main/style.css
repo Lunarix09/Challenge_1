@@ -333,7 +333,7 @@ form{
 @media screen and (max-width:300px) {
     .pop_up{
         width: 92vw;
-        height: 96vh;
+        height: 80vh;
         padding: 20px;
     }
     .card{
