@@ -335,8 +335,32 @@ form{
         width: 92vw;
         height: 96vh;
         padding: 20px;
-        left: 50vw;
-        top: 50vh;
+    }
+    .card{
+        width: 90vw;
+        height: 95vh;
+        top: 2vh;
+        left: 5vw;
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            top: 30vh;
+        }
+        to {
+            opacity: 1;
+            top: 20vh;
+        }
+    }
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+            top: 20vh;
+        }
+        to {
+            opacity: 0;
+            top: 30vh;
+        }
     }
 }
 @media screen and (max-width:765px) {
