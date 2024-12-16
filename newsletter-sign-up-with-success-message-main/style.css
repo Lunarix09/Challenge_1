@@ -330,14 +330,14 @@ form{
         top: 50vh;
     }
 }
-@media screen and (max-width:300px) {
+@media screen and (max-width: 325px) {
     .pop_up{
         width: 92vw;
-        height: 80vh;
+        height: 68vh;
         padding: 20px;
     }
     .card{
-        width: 90vw;
+        width: 92vw;
         height: 95vh;
         top: 2vh;
         left: 5vw;
@@ -361,6 +361,21 @@ form{
             opacity: 0;
             top: 20vh;
         }
+    }
+}
+@media screen and (max-width: 299px) {
+    .card{
+        height: 98vh;
+        top: 2vh;
+    }
+}
+@media screen and (max-width:300px) {
+    .pop_up{
+        width: 92vw;
+        height: 96vh;
+        padding: 20px;
+        left: 50vw;
+        top: 2vh;
     }
 }
 @media screen and (max-width:765px) {
