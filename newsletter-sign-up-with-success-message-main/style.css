@@ -345,21 +345,21 @@ form{
     @keyframes fadeIn {
         from {
             opacity: 0;
-            top: 30vh;
+            top: 20vh;
         }
         to {
             opacity: 1;
-            top: 20vh;
+            top: 10vh;
         }
     }
     @keyframes fadeOut {
         from {
             opacity: 1;
-            top: 20vh;
+            top: 10vh;
         }
         to {
             opacity: 0;
-            top: 30vh;
+            top: 20vh;
         }
     }
 }
