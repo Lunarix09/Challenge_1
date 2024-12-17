@@ -7,6 +7,7 @@ function send(email) {
     if (valideremail(email)) {
         document.querySelector(".sucess_message").classList.add("active");
         document.querySelector("#sucess_message").classList.add("fadeIn1");
+        document.querySelector(".email").classList.remove("error");
         
         document.querySelector(".email").id= "email";
         document.querySelector(".placeholder_1").style.display= "none";
@@ -41,4 +42,5 @@ document.querySelector(".submit").addEventListener("click",(event)=>{
     event.preventDefault();
     let email= document.querySelector(".email").value;
     send(email);
+    email="";
 });
