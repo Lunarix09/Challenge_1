@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 *{
     margin: 0px;
@@ -259,7 +258,7 @@ form{
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: start;
+    justify-content: space-between;
     transform: translate(-50%, -50%);
     width: 25vw;
     height: 55vh;
@@ -330,51 +329,53 @@ form{
     
 }
 @media screen and (max-width:488px) {
-    .pop_up{
-        width: 92vw;
-        padding: 20px;
-        left: 50vw;
-        height: 65vh;
-    }
-}
-@media screen and (max-width: 325px) {
-    .card{
-        width: 96vw;
-        left: 15vw;
-        height: 95vh;
-        top: 10vh;
-    }
     @keyframes fadeIn {
         from {
-            width: 96vw;
-            left: 15vw;
-            height: 70vh;
             opacity: 0;
-            top: 45vh;
-        }
-        to {    
-            width: 96vw;
-            left: 15vw;
+            position: absolute;
+            width: 92vw;
+            padding: 20px;
+            top: 30vh;
+            left: 50vw;
             height: 70vh;
+        }
+        to {
             opacity: 1;
+            position: absolute;
+            width: 92vw;
+            padding: 20px;
             top: 45vh;
+            left: 50vw;
+            height: 70vh;
         }
     }
     @keyframes fadeOut {
         from {
-            width: 96vw;
-            left: 15vw;
-            height: 70vh;
             opacity: 1;
+            position: absolute;
+            width: 92vw;
+            padding: 20px;
             top: 45vh;
+            left: 50vw;
+            height: 70vh;
         }
         to {
-            width: 96vw;
-            left: 15vw;
-            height: 70vh;
             opacity: 0;
-            top: 45vh;
+            position: absolute;
+            width: 92vw;
+            padding: 20px;
+            top: 30vh;
+            left: 50vw;
+            height: 70vh;
         }
+    }
+}
+@media screen and (max-width: 325px) {
+    .card{
+        width: 92vw;
+        height: 95vh;
+        top: 10vh;
+        left: 5vw;
     }
 }
 @media screen and (max-width:300px) {
@@ -383,43 +384,11 @@ form{
         top: 2vh;
     }
     .pop_up{
-        width: 98vw;
-        height: 80vh;
+        width: 92vw;
+        height: 96vh;
         padding: 20px;
-        left: 15vw;
-        top: 45vh;
-    }
-    @keyframes fadeIn {
-        from {
-            width: 98vw;
-            left: 15vw;
-            height: 80vh;
-            opacity: 0;
-            top: 45vh;
-        }
-        to {    
-            width: 98vw;
-            left: 15vw;
-            height: 70vh;
-            opacity: 1;
-            top: 40vh;
-        }
-    }
-    @keyframes fadeOut {
-        from {
-            width: 98vw;
-            left: 15vw;
-            height: 70vh;
-            opacity: 1;
-            top: 50vh;
-        }
-        to {
-            width: 98vw;
-            left: 15vw;
-            height: 70vh;
-            opacity: 0;
-            top: 40vh;
-        }
+        left: 50vw;
+        top: 10vh;
     }
 }
 @media screen and (max-width:765px) {
