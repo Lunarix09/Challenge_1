@@ -334,10 +334,10 @@ form{
         flex-direction: column-reverse;
         gap: 0px;
         padding: 5px;
-        width: 93vw;
+        width: 94vw;
         height: 100vh;
         top: 3vh;
-        left: 3.3vw;
+        left: 3vw;
         border-radius: 0px;
     }
     .left_side{
