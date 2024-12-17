@@ -333,11 +333,11 @@ form{
         display: flex;
         flex-direction: column-reverse;
         gap: 0px;
-        padding: 8px;
-        width: 95vw;
+        padding: 10px;
+        width: 93vw;
         height: 100vh;
-        top: 5vh;
-        left: 2.5vw;
+        top: 8vh;
+        left: 3.3vw;
     }
     
     .left_side{
