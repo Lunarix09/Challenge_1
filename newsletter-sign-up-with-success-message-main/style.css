@@ -340,7 +340,7 @@ form{
 @media screen and (max-width: 325px) {
     .pop_up{
         width: 92vw;
-        height: 68vh;
+        height: 60vh;
         padding: 20px;
     }
     .card{
@@ -352,21 +352,21 @@ form{
     @keyframes fadeIn {
         from {
             opacity: 0;
-            top: 40vh;
+            top: 30vh;
         }
         to {
             opacity: 1;
-            top: 50vh;
+            top: 35vh;
         }
     }
     @keyframes fadeOut {
         from {
             opacity: 1;
-            top: 20vh;
+            top: 35vh;
         }
         to {
             opacity: 0;
-            top: 10vh;
+            top: 30vh;
         }
     }
 }
