@@ -340,21 +340,21 @@ form{
 @media screen and (max-width: 325px) {
     .card{
         width: 93vw;
-        left: 5vw;
+        left: 15vw;
         height: 95vh;
         top: 10vh;
     }
     @keyframes fadeIn {
         from {
             width: 93vw;
-            left: 5vw;
+            left: 15vw;
             height: 70vh;
             opacity: 0;
             top: 45vh;
         }
         to {    
             width: 93vw;
-            left: 5vw;
+            left: 15vw;
             height: 70vh;
             opacity: 1;
             top: 45vh;
@@ -363,14 +363,14 @@ form{
     @keyframes fadeOut {
         from {
             width: 93vw;
-            left: 5vw;
+            left: 15vw;
             height: 70vh;
             opacity: 1;
             top: 45vh;
         }
         to {
             width: 93vw;
-            left: 5vw;
+            left: 15vw;
             height: 70vh;
             opacity: 0;
             top: 45vh;
@@ -392,14 +392,14 @@ form{
     @keyframes fadeIn {
         from {
             width: 95vw;
-            left: 5vw;
+            left: 15vw;
             height: 80vh;
             opacity: 0;
             top: 45vh;
         }
         to {    
             width: 93vw;
-            left: 5vw;
+            left: 15vw;
             height: 70vh;
             opacity: 1;
             top: 40vh;
