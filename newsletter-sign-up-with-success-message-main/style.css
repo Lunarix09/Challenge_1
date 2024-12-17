@@ -376,7 +376,7 @@ form{
             padding: 20px;
             top: 30vh;
             left: 50vw;
-            height: 70vh;
+            height: 66vh;
         }
         to {
             opacity: 1;
@@ -385,7 +385,7 @@ form{
             padding: 20px;
             top: 42vh;
             left: 50vw;
-            height: 70vh;
+            height: 66vh;
         }
     }
     @keyframes fadeOut {
@@ -396,7 +396,7 @@ form{
             padding: 20px;
             top: 42vh;
             left: 50vw;
-            height: 70vh;
+            height: 66vh;
         }
         to {
             opacity: 0;
@@ -405,7 +405,7 @@ form{
             padding: 20px;
             top: 30vh;
             left: 50vw;
-            height: 70vh;
+            height: 66vh;
         }
     }
 }
