@@ -373,15 +373,15 @@ form{
 @media screen and (max-width: 325px) {
     .card{
         width: 92vw;
-        height: 99vh;
-        top: 8vh;
+        height: 96vh;
+        top: 10vh;
         left: 5vw;
     }
 }
 @media screen and (max-width:300px) {
     .card{
-        height: 98vh;
-        top: 2vh;
+        height: 101vh;
+        top: 5vh;
     }
     .pop_up{
         width: 92vw;
