@@ -344,7 +344,7 @@ form{
             position: absolute;
             width: 92vw;
             padding: 20px;
-            top: 45vh;
+            top: 42vh;
             left: 50vw;
             height: 70vh;
         }
@@ -355,7 +355,7 @@ form{
             position: absolute;
             width: 92vw;
             padding: 20px;
-            top: 45vh;
+            top: 42vh;
             left: 50vw;
             height: 70vh;
         }
@@ -373,8 +373,8 @@ form{
 @media screen and (max-width: 325px) {
     .card{
         width: 92vw;
-        height: 95vh;
-        top: 10vh;
+        height: 99vh;
+        top: 8vh;
         left: 5vw;
     }
 }
