@@ -42,5 +42,7 @@ document.querySelector(".submit").addEventListener("click",(event)=>{
     event.preventDefault();
     let email= document.querySelector(".email").value;
     send(email);
-    email="";
+    setTimeout(() => {
+        document.querySelector(".email").value="";
+    }, 300); 
 });
