@@ -376,6 +376,7 @@ form{
         height: 96vh;
         top: 10vh;
         left: 5vw;
+        padding: 8px;
     }
 }
 @media screen and (max-width:300px) {
