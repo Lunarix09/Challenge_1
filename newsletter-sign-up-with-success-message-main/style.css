@@ -338,39 +338,42 @@ form{
     }
 }
 @media screen and (max-width: 325px) {
-    .pop_up{
-        width: 92vw;
-        height: 60vh;
-        padding: 20px;
-    }
     .card{
-        width: 92vw;
+        width: 93vw;
+        left: 5vw;
         height: 95vh;
         top: 10vh;
-        left: 5vw;
     }
     @keyframes fadeIn {
         from {
+            width: 93vw;
+            left: 5vw;
             height: 70vh;
             opacity: 0;
-            top: 30vh;
+            top: 45vh;
         }
-        to {
+        to {    
+            width: 93vw;
+            left: 5vw;
             height: 70vh;
             opacity: 1;
-            top: 35vh;
+            top: 45vh;
         }
     }
     @keyframes fadeOut {
         from {
+            width: 93vw;
+            left: 5vw;
             height: 70vh;
             opacity: 1;
-            top: 35vh;
+            top: 45vh;
         }
         to {
+            width: 93vw;
+            left: 5vw;
             height: 70vh;
             opacity: 0;
-            top: 30vh;
+            top: 45vh;
         }
     }
 }
@@ -380,11 +383,43 @@ form{
         top: 2vh;
     }
     .pop_up{
-        width: 92vw;
-        height: 86vh;
+        width: 95vw;
+        height: 80vh;
         padding: 20px;
-        left: 35vw;
-        top: 10vh;
+        left: 15vw;
+        top: 45vh;
+    }
+    @keyframes fadeIn {
+        from {
+            width: 95vw;
+            left: 5vw;
+            height: 80vh;
+            opacity: 0;
+            top: 45vh;
+        }
+        to {    
+            width: 93vw;
+            left: 5vw;
+            height: 70vh;
+            opacity: 1;
+            top: 40vh;
+        }
+    }
+    @keyframes fadeOut {
+        from {
+            width: 93vw;
+            left: 5vw;
+            height: 70vh;
+            opacity: 1;
+            top: 50vh;
+        }
+        to {
+            width: 93vw;
+            left: 5vw;
+            height: 70vh;
+            opacity: 0;
+            top: 40vh;
+        }
     }
 }
 @media screen and (max-width:765px) {
