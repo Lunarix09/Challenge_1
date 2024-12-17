@@ -351,20 +351,24 @@ form{
     }
     @keyframes fadeIn {
         from {
+            height: 70vh;
             opacity: 0;
             top: 30vh;
         }
         to {
+            height: 70vh;
             opacity: 1;
             top: 35vh;
         }
     }
     @keyframes fadeOut {
         from {
+            height: 70vh;
             opacity: 1;
             top: 35vh;
         }
         to {
+            height: 70vh;
             opacity: 0;
             top: 30vh;
         }
@@ -377,9 +381,9 @@ form{
     }
     .pop_up{
         width: 92vw;
-        height: 96vh;
+        height: 86vh;
         padding: 20px;
-        left: 50vw;
+        left: 35vw;
         top: 10vh;
     }
 }
