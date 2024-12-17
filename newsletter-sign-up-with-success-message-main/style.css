@@ -336,7 +336,7 @@ form{
         padding: 5px;
         width: 93vw;
         height: 100vh;
-        top: 8vh;
+        top: 0vh;
         left: 3.3vw;
         border-radius: 0px;
     }
@@ -412,19 +412,6 @@ form{
     }
 }
 
-@media screen and (max-width:300px) {
-    .card{
-        height: 98vh;
-        top: 1vh;
-    }
-    .pop_up{
-        width: 92vw;
-        height: 96vh;
-        padding: 20px;
-        left: 50vw;
-        top: 10vh;
-    }
-}
 @media screen and (max-width:765px) and (min-width:488px) {
     .card{
         display: flex;
