@@ -234,8 +234,8 @@ document.querySelector(".cofirm_order_btn").addEventListener("click",()=>{
     
     document.querySelectorAll(".article").forEach((article)=> {
         article.querySelector(".remove_btn").disabled= true;
-        article.querySelector(".remove_btn").display= "none";
-        article.querySelector(".u_price").display= "none";
+        article.querySelector(".remove_btn").style.display= "none";
+        article.querySelector(".u_price").style.display= "none";
     });
 
     document.querySelector(".pop_up_background .order").insertAdjacentElement("afterbegin", document.querySelector(".articles"));
@@ -250,8 +250,14 @@ document.querySelector(".pop_up_background").addEventListener("click",(event)=>{
                 document.querySelector(".cart").childNodes[1].insertAdjacentElement("afterend", document.querySelector(".order .articles"));
                 document.querySelector(".confirm_order").insertAdjacentElement("afterbegin", document.querySelector(".order .total"));
                 document.querySelector(".pop_up .order").innerHTML="";
+                
+                document.querySelectorAll(".article").forEach((article)=> {
+                    article.querySelector(".remove_btn").disabled= false;
+                    article.querySelector(".remove_btn").style.display= "flex";
+                    article.querySelector(".u_price").style.display= "flex";
+                });
             }, 200);
-        
+            
             setTimeout(() => {
                 document.querySelector(".pop_up_background").classList.remove("active");
                 document.querySelector(".pop_up").classList.remove("pop_out", "pop_in"); 

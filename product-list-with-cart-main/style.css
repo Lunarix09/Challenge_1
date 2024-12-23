@@ -645,7 +645,8 @@ body{
 
     .attribution {
         position: relative;
-        top: 12vh;
+        top: 3vh;
+        margin: 0px;
     }
     .pop_up{
         padding: 12px;
