@@ -232,12 +232,18 @@ document.querySelector(".cofirm_order_btn").addEventListener("click",()=>{
     document.querySelector(".pop_up_background").classList.add("active");
     document.querySelector(".pop_up").classList.add("pop_in");
     
+    document.querySelectorAll(".article").forEach((article)=> {
+        article.querySelector(".remove_btn").disabled= true;
+        article.querySelector(".remove_btn").display= "none";
+        article.querySelector(".u_price").display= "none";
+    });
+
     document.querySelector(".pop_up_background .order").insertAdjacentElement("afterbegin", document.querySelector(".articles"));
     document.querySelector(".pop_up_background .order").insertAdjacentElement("beforeend", document.querySelector(".total"));
     thumbnail();
 });
 document.querySelector(".pop_up_background").addEventListener("click",(event)=>{
-        if (event.target == document.querySelector(".pop_up_background") || event.target == document.querySelector(".pop_up .start")) {
+        if (event.target == document.querySelector(".pop_up_background") || event.target == document.querySelector(".start")) {
             document.querySelector(".pop_up").classList.add("pop_out");
             setTimeout(() => {
                 document.querySelectorAll(".pop_up .order .article_img").forEach((img)=> {img.remove()});
@@ -245,9 +251,10 @@ document.querySelector(".pop_up_background").addEventListener("click",(event)=>{
                 document.querySelector(".confirm_order").insertAdjacentElement("afterbegin", document.querySelector(".order .total"));
                 document.querySelector(".pop_up .order").innerHTML="";
             }, 200);
+        
+            setTimeout(() => {
+                document.querySelector(".pop_up_background").classList.remove("active");
+                document.querySelector(".pop_up").classList.remove("pop_out", "pop_in"); 
+            }, 300); 
         }
-        setTimeout(() => {
-            document.querySelector(".pop_up_background").classList.remove("active");
-            document.querySelector(".pop_up").classList.remove("pop_out", "pop_in"); 
-        }, 300); 
 });
