@@ -237,7 +237,7 @@ document.querySelector(".cofirm_order_btn").addEventListener("click",()=>{
     thumbnail();
 });
 document.querySelector(".pop_up_background").addEventListener("click",(event)=>{
-        if (event.target == document.querySelector(".pop_up_background") || event.target == document.querySelector(".pop_up_background .start")) {
+        if (event.target == document.querySelector(".pop_up_background") || event.target == document.querySelector(".pop_up .start")) {
             document.querySelector(".pop_up").classList.add("pop_out");
             setTimeout(() => {
                 document.querySelectorAll(".pop_up .order .article_img").forEach((img)=> {img.remove()});
