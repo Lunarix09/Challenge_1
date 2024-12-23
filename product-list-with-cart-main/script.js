@@ -144,7 +144,7 @@ function in_and_de_crement(){
             document.querySelectorAll(".article").forEach((article)=> {
                 if (article.classList[2] == counter.classList[1]) {
                     let article_copy= article;
-                    article_copy.querySelector(".counter_span").innerHTML= counter.querySelector(".counter_span").innerHTML;
+                    article_copy.querySelector(".counter_span").innerHTML= counter.querySelector(".counter_span").innerHTML + "x";
                     
                     let u_p= parseFloat(article_copy.querySelector(".u_price").innerText.replace('@$', ''));
                     let n_art= parseFloat(article_copy.querySelector(".counter_span").innerText.replace('x', ''));
@@ -181,7 +181,7 @@ function in_and_de_crement(){
             document.querySelectorAll(".article").forEach((article)=> {
                 if (article.classList[2] == counter.classList[1]) {
                     let article_copy= article;
-                    article_copy.querySelector(".counter_span").innerHTML= counter.querySelector(".counter_span").innerHTML;
+                    article_copy.querySelector(".counter_span").innerHTML= counter.querySelector(".counter_span").innerHTML + "x";
                     
                     let u_p= parseFloat(article_copy.querySelector(".u_price").innerText.replace('@$', ''));
                     let n_art= parseFloat(article_copy.querySelector(".counter_span").innerText.replace('x', ''));
