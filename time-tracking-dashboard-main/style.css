@@ -215,7 +215,7 @@ img{
         font-size: 1.7em;
     }
 }
-@media screen and (min-width: 691px){
+@media screen and (min-width: 700px){
    .cardi:hover{
       background-color: hsl(235, 45%, 61%);
    }
