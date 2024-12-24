@@ -748,6 +748,38 @@ body{
     .details{
         margin-top: 2em;
     }
+    @keyframes pop_out {
+    0%{
+        position: absolute;
+        left: 50vw;
+        top: 45vh;
+    }
+    50%{
+        opacity: 0.6;
+    }
+    100%{
+        position: absolute;
+        left: 50vw;
+        top: 30vh;
+    }
+    }@keyframes pop_in {
+     0%{
+        position: absolute;
+        left: 50vw;
+        top: 30vh;
+    }
+    100%{
+        position: absolute;
+        left: 50vw;
+        top: 45vh;
+    }
+    }
+    .pop_up{
+    height: 75vh;
+    position: absolute;
+    left: 50vw;
+    top: 45vh;
+    }
 }
 @media screen and (max-width: 350px) {
     .add_to_cart{
