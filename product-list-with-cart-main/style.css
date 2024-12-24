@@ -752,7 +752,7 @@ body{
     0%{
         position: absolute;
         left: 50vw;
-        top: 35vh;
+        top: 40vh;
     }
     50%{
         opacity: 0.6;
@@ -771,14 +771,14 @@ body{
     100%{
         position: absolute;
         left: 50vw;
-        top: 35vh;
+        top: 40vh;
     }
     }
     .pop_up{
     height: 75vh;
     position: absolute;
     left: 50vw;
-    top: 35vh;
+    top: 40vh;
     }
 }
 @media screen and (max-width: 350px) {
