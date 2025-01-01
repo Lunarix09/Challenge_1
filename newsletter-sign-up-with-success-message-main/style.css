@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    width: 100h;
+    height: 100vh;
+    background-color: hsl(235, 18%, 26%);
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 13px;
+    width: 65vw;
+    height: 70vh;
+    position: relative;
+    top: 15vh;
+    left: 18vw;
+}
+.left_side{
+    width: 55%;
+    height: 100%;
+    display:flex ;
+    flex-direction: column;
+    padding: 12px;
+}
+h1{
+    font-size: 2em;
+    color: hsl(234, 29%, 20%);
+    text-align: center;
+    margin-bottom: 20px;
+}
+p{
+    font-size: 1.1em;
+    color: hsl(234, 29%, 20%);
+}
+
+ul {
+    list-style: none; /* Supprime les marqueurs par défaut */
+    margin: 20px 0;
+    padding: 0;
+    list-style-position: inside;
+    margin-bottom: 22px;
+}
+li {
+    position: relative;
+    padding-left: 28px; /* Espace pour l'icône */
+    font-size: 1em;
+    color: hsl(234, 29%, 20%);
+    margin-bottom: 13px;
+}
+li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 19px;
+    height: 19px;
+    margin-right: 12px;
+    background-image: url("images/icon-list.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.email{
+    width: 100%;
+    height: 40px;
+    padding: 12px;
+    color: hsl(234, 29%, 20%);
+    font-size: 18px;
+    margin-bottom: 13px;
+    border: 1.5px solid hsl(231, 7%, 60%);
+    border-radius: 8px;
+    overflow: hidden;
+    outline: none;
+}
+.left_side span{
+    display: flex;
+    justify-content: space-between;
+}
+.email::placeholder{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.placeholder{
+    color: hsl(231, 7%, 60%);
+}
+.placeholder_1{
+    display: none;
+    color: hsl(4, 100%, 67%);
+}
+.error{
+    border: 1.8px solid hsl(4, 100%, 67%);
+    background-color: hsla(4, 100%, 67%, 0.457);
+    color: hsl(4, 100%, 67%);
+    width: 100%;
+    height: 40px;
+    padding: 12px;
+    color: hsl(234, 29%, 20%);
+    font-size: 18px;
+    margin-bottom: 13px;
+    border-radius: 8px;
+    overflow: hidden;
+    outline: none;
+}
+.email:focus{
+    border: 1.8px solid hsl(234, 29%, 20%);
+}
+.submit{
+    width: 100%;
+    height: 40px;
+    padding: 6px;
+    background-color: hsl(235, 18%, 26%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    font-size: 18px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.submit:hover{
+    box-shadow: 2px 6px 13px hsl(231, 7%, 60%);
+}
+.submit:active{
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+}
+.right_side{
+    width: 45%;
+    height: 100%;
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/illustration-sign-up-desktop.svg");
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 13px;
+}
+
+.attribution {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: hsl(231, 7%, 60%);
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: justify;
+    flex-wrap: wrap;
+    position: relative;
+    top: 20vh;
+}
+.attribution a {
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+}
+.active{
+    display: flex !important;
+}
+.sucess_message{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 3;
+    background-color: hsla(235, 18%, 26%, 0.274);
+    opacity: 0px;
+}
+.fadeIn1{ 
+    opacity: 0;
+    backdrop-filter: blur(0px);   
+    animation: fadeIn1 0.60s forwards;
+}
+@keyframes fadeIn1 {
+    from {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+    }
+    to {
+        opacity: 1;
+        backdrop-filter: blur(1.6px);
+    }
+}
+.fadeOut1{ 
+    opacity: 1;   
+    animation: fadeOut1 0.60s forwards;
+}
+@keyframes fadeOut1 {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.dismiss_btn{
+    text-align: center;
+    padding: 10px 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    margin-top: 13px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    background: linear-gradient(90deg, hsl(4, 100%, 67%) 45%, hsl(16, 100%, 67%) 100%);
+    cursor: pointer;
+}
+.pop_up img{
+    width: 35px;
+    height: 35px;
+}
+.pop_up h1{
+    margin-top: 12px;
+    text-align: start;
+}
+.dismiss_btn:hover{
+    box-shadow: 2px 5px 12px hsl(4, 100%, 67%);
+}
+.dismiss_btn:active{
+    background: hsl(235, 18%, 26%);
+}
+/*.attribution:active::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 8px; /* Adapté au bouton 
+    background: linear-gradient(90deg, hsl(4, 100%, 67%) 45%, hsl(16, 100%, 67%) 100%);
+    box-shadow: 2px 5px 16px rgba(0, 0, 0, 0.2); /* Ombre légère pour compléter l'effet 
+}*/
+.pop_up{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    transform: translate(-50%, -50%);
+    width: 25vw;
+    height: 55vh;
+    padding: 20px;
+    position: absolute;
+    left: 50vw;
+    top: 0vh;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: hsl(0, 0%, 100%);
+    opacity: 0;
+}
+.fadeIn{
+    opacity: 0;
+    animation: fadeIn 0.7s forwards;
+}
+.fadeOut{ 
+    opacity: 1;   
+    animation: fadeOut 0.60s forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        top: 40vh;
+    }
+    to {
+        opacity: 1;
+        top: 50vh;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        top: 50vh;
+    }
+    to {
+        opacity: 0;
+        top: 40vh;
+    }
+}
+@media screen and (max-width: 990px) {
+    .card{
+        width: 75vw;
+        height: 90vh;
+        padding: 20px;
+        left: 12vw;
+        top: 5vh;
+    }
+    ul {
+        margin-bottom: 5px;
+    }
+    .pop_up{
+        width: 55vw;
+        height: 60vh;
+        padding: 20px;
+        left: 50vw;
+        top: 45vh;
+    }
+}
+@media screen and (max-width:800px) {
+    .pop_up{
+        width: 58vw;
+        height: 60vh;
+        padding: 20px;
+        left: 50vw;
+        top: 45vh;
+    }
+    
+}
+@media screen and (max-width:488px) {
+    .card{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0px;
+        padding: 5px;
+        width: 94vw;
+        height: 100vh;
+        top: 3vh;
+        left: 3vw;
+        border-radius: 0px;
+    }
+    .left_side{
+        width: 100%;
+        height: 60%;
+        border-radius: 0px;
+    }
+    .right_side{
+        width: 100%;
+        height: 40%;
+        border-radius: 0px 0px 16px 16px;
+    }
+    h1{
+        font-size: 1.5em;
+        text-align: start;
+        margin-bottom: 12px;
+    }
+    .submit, .dismiss_btn{
+        width: 100%;
+        height: 56px;
+        padding: 13px 6px;
+    }
+    .dismiss_btn{
+        font-size: 21px;
+    }
+    .pop_up{
+        width: 65vw;
+        height: 56vh;
+        padding: 20px;
+        left: 50vw;
+        top: 40vh;
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            position: absolute;
+            width: 92vw;
+            padding: 20px;
+            top: 30vh;
+            left: 50vw;
+            height: 66vh;
+        }
+        to {
+            opacity: 1;
+            position: absolute;
+            width: 92vw;
+            padding: 20px;
+            top: 42vh;
+            left: 50vw;
+            height: 66vh;
+        }
+    }
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+            position: absolute;
+            width: 92vw;
+            padding: 20px;
+            top: 42vh;
+            left: 50vw;
+            height: 66vh;
+        }
+        to {
+            opacity: 0;
+            position: absolute;
+            width: 92vw;
+            padding: 20px;
+            top: 30vh;
+            left: 50vw;
+            height: 66vh;
+        }
+    }
+}
+
+@media screen and (max-width:765px) and (min-width:488px) {
+    .card{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0px;
+        width: 90vw;
+        height: 100vh;
+        top: 5vh;
+        left: 5vw;
+    }
+    .left_side{
+        width: 100%;
+        height: 60%;
+    }
+    .right_side{
+        background-image: url("images/illustration-sign-up-mobile.svg");
+        width: 100%;
+        height: 40%;
+    }
+    h1{
+        font-size: 1.5em;
+        text-align: start;
+        margin-bottom: 12px;
+    }
+    .pop_up{
+        width: 65vw;
+        height: 56vh;
+        padding: 20px;
+        left: 50vw;
+        top: 40vh;
+    }
+}
