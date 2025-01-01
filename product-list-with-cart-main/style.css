@@ -1,0 +1,797 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat Text", sans-sérif;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: hsl(20, 50%, 98%);
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    height: 90vh;
+    justify-content: space-between;
+    position: relative;
+    top: 13vh;
+    left: 1vw;
+}
+.desserts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 12px;
+    width: 80vw;
+    height: auto;
+    margin-right: 1vw;
+}
+
+
+.d_1{
+    grid-column: 1;
+    grid-row: 1;
+}
+.d_2{
+    grid-column: 2;
+    grid-row: 1;
+}
+.d_3{
+    grid-column: 3;
+    grid-row: 1;
+}
+.d_4{
+    grid-column: 1;
+    grid-row: 2;
+}
+.d_5{
+    grid-column: 2;
+    grid-row: 2;
+}
+.d_6{
+    grid-column: 3;
+    grid-row: 2;
+}
+.d_7{
+    grid-column: 1;
+    grid-row: 3;
+}
+.d_8{
+    grid-column: 2;
+    grid-row: 3;
+}
+.d_9{
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.d{
+    display: flex;
+    flex-direction: column;
+}
+.d_activate{
+    border: 2px solid hsl(14, 86%, 42%);
+}
+.desserts_img{
+    width: 100%;
+    height: 68%;
+    border-radius: 13px;
+}
+.desserts_img[src= "assets/images/loading.svg"]{
+    width: 30%;
+    height: 30%;
+}
+.desserts_label{
+    position: relative;
+    left: 7vw;
+    top: -8vh;
+    font-size: 1.6em;
+    font-weight: 600;
+    color: hsl(14, 65%, 9%);
+}
+
+.add_to_cart{
+    display: flex;
+    width: 80%;
+    height: 30px;
+    font-weight: 600;
+    font-size: 1em;
+    color: hsl(12, 29%, 27%);
+    border: 1.5px solid hsl(12, 20%, 44%);
+    border-radius: 25px;
+    padding: 5px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -30%;
+    left: 10%;
+    background-color: hsl(0, 0%, 100%);
+    animation: fadeIn 0.6s forwards;
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0.3;
+        width: 25%;
+        left: 30%;
+    }
+    100%{
+        opacity: 1;
+        width: 80%;
+        left: 10%;
+    }
+}
+.add_to_cart:hover{
+    border: 1.5px solid hsl(14, 86%, 42%);
+    color: hsl(14, 86%, 42%);
+}
+
+.counter{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(14, 86%, 42%);
+    color: hsl(0, 0%, 100%);
+    width: 80%;
+    height: 30px;
+    border-radius: 25px;
+    position: relative;
+    top: -30%;
+    left: 10%;
+    padding: 2px 12px;
+    animation: fadein 0.6s forwards;
+}
+@keyframes fadein{
+    0%{
+        opacity: 0.3;
+        width: 25%;
+        left: 30%;
+    }
+    100%{
+        opacity: 1;
+        width: 80%;
+        left: 10%;
+    }
+}
+.counter button{
+    border: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background-color: transparent;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.counter button img{
+    border: 1.8px solid hsl(0, 0%, 100%);
+    border-radius: 100%;
+    width: 16px;
+    height: 16px;
+    padding: 3px;
+}
+.counter button:active{
+    transform: scale(1.2);
+    background-color: hsl(0, 0%, 100%);
+}
+.details{
+    margin-top: 2em;
+}
+.details p{
+    color: hsl(7, 20%, 60%);
+    font-size: 1.2em;
+}
+.details h3{
+    color: hsl(12, 29%, 27%);
+    font-weight: 800;
+    font-size: 1.28em;
+}
+.details h5{
+    font-size: 1.1em;
+    color: hsl(14, 86%, 42%);
+}
+
+
+
+
+
+.article_img{
+    border-radius: 13px;
+    margin-right: 16px;
+    height: 100%;
+    width: 20%;
+}
+.cart .article, .article{
+    border-bottom: 1.5px solid hsl(13, 31%, 94%);
+    border-radius: 13px;
+    padding: 6px 3px;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.cart .article h2, .article h2{
+    color: hsl(12, 20%, 44%);
+    font-size: 0.9em;   
+    word-spacing: 2px;
+    margin-bottom: 8px;
+}
+.cart .article .n_article, .article .n_article{
+    color: hsl(14, 86%, 42%);
+    font-weight: 600;
+}
+.cart .article .u_price, .article .u_price{
+    color: hsl(7, 20%, 60%);
+    font-weight: 300;
+}
+.cart .article .n_article_x_u_price, .article .n_article_x_u_price{
+    color: hsl(12, 20%, 44%);
+    font-weight: 600;
+}
+.cart .article .dessert_infos{
+    width: 50%;
+    margin-right: 35%;
+}
+.dessert_infos{
+    margin-right: 9vw;
+}
+.cart .article .dessert_infos div, .article .dessert_infos div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.cart .article button, .article button{
+    border: none;
+    width: 19px;
+    height: 19px;
+    border-radius: 100%;
+    background-color: transparent;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.cart .article button img:active, article button img:active{
+    border: 1.8px solid hsl(14, 86%, 42%);
+}
+.cart .article button img, .article button img{
+    border: 1.8px solid hsl(14, 25%, 72%);
+    border-radius: 100%;
+    width: 18px;
+    height: 18px;
+    padding: 3px;
+}
+.cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 19vw;
+    height: 49vh;
+    background-color: hsl(0, 0%, 100%);
+    padding: 15px;
+    border-radius: 13px;
+
+}
+.cart .articles{
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.cart .articles::-webkit-scrollbar {
+    display: none; /* Chrome, Safari et Edge : masque les barres de défilement */
+
+}
+.cart_impt{
+    height: 60vh !important;
+}
+.cart h2{
+    color: hsl(14, 86%, 42%);
+    font-size: 1.3em;   
+    word-spacing: 3px;
+}
+.cart .empty{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.confirm_order{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    animation: in 0.60s forwards;
+}
+@keyframes in {
+    0%{
+        opacity: 0;
+        transform: translate(0px, 10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+.total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+.total span, .order .total span{
+    font-weight: 600;
+    font-size: 1.1em;
+    color: hsl(12, 20%, 44%);
+}
+.total .total_count, .order .total .total_count{
+    font-weight: 700;
+    font-size: 1.5em;
+    color: hsl(12, 29%, 27%);
+}
+.confirm_order .carbon_neutral{
+    display: flex;
+    align-items: center;
+    color: hsl(14, 65%, 9%);
+    font-size: 13px;
+    background-color: hsl(20, 50%, 98%);
+    padding: 5px 12px;
+    margin: 15px 0px;
+}
+.confirm_order .cofirm_order_btn{
+    background-color: hsl(14, 86%, 42%);
+    border: none;
+    border-radius: 20px;
+    padding: 5px 12px;
+    color: hsl(20, 50%, 98%);
+    font-size: 1.1em;
+    cursor: pointer;
+}
+.confirm_order .cofirm_order_btn:active, .pop_up .start:active{
+    background-color: hsl(12, 20%, 44%);
+}
+
+
+.pop_up_background{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 3;
+    background-color: hsla(14, 65%, 9%, 0.664);
+    backdrop-filter: blur(1.2px);
+}
+.active{
+    display: flex !important;
+}
+
+.pop_up{
+    display:flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+    align-items: start;
+    padding: 20px;
+    border-radius: 16px;
+
+    transform: translate(-50%, -50%);
+    width: 35vw;
+    height: 85vh;
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+}
+.pop_in{
+    animation: pop_in 0.6s forwards;
+ }
+@keyframes pop_in {
+     0%{
+        position: absolute;
+        left: 50vw;
+        top: 30vh;
+    }
+    100%{
+        position: absolute;
+        left: 50vw;
+        top: 50vh;
+    }
+}
+.pop_out{
+    animation: pop_out 0.8s forwards;
+}
+@keyframes pop_out {
+    0%{
+        position: absolute;
+        left: 50vw;
+        top: 50vh;
+    }
+    50%{
+        opacity: 0.6;
+    }
+    100%{
+        position: absolute;
+        left: 50vw;
+        top: 30vh;
+    }
+}
+.pop_up .text h1{
+    font-size: 2em;
+    font-weight: 600;
+    color: hsl(14, 65%, 9%);
+}
+.pop_up .text p{
+    font-size: 1.12em;
+    color: hsl(7, 20%, 60%);
+    font-weight: 500;
+}
+.pop_up .order{
+    background-color: hsl(13, 31%, 94%);
+    width: 100%;
+    height: 60%;
+    border-radius: 13px;
+    padding: 15px;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.pop_up .order::-webkit-scrollbar {
+    display: none; /* Chrome, Safari et Edge : masque les barres de défilement */
+
+}
+
+.pop_up .start{
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(14, 86%, 42%);
+    color: hsl(0, 0%, 100%);
+    font-size: 1.12em;
+    width: 100%;
+    height: 35px;
+    border-radius: 25px;
+    padding: 2px 12px;
+    margin-top: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+
+.attribution {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: hsl(12, 20%, 44%);
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    flex-wrap: wrap;
+    position: relative;
+    top: 15vh;
+}
+.attribution a {
+    text-decoration: none;
+    color: hsl(14, 86%, 42%);
+    font-weight: 700;
+}
+
+@media screen and (max-width: 999px){
+    .cart{
+        width: 35vw;
+        height: 45vh;
+    }
+    .add_to_cart, .counter{
+        top: -43%;
+        left: 7.5%;
+        padding: 5px;
+        width: 85%;
+    }
+    .d_4 .counter, .d_5 .counter, .d_7 .counter{
+        top: -38%;
+        left: 10%;
+    }
+    .desserts_label{
+        position: relative;
+        left: 10vw;
+        top: -8vh;
+    }
+}
+
+@media screen and (max-width: 999px) and (min-width: 986px) {
+    .d_1 .add_to_cart{
+        top: -36%;
+        left: 10%;
+    }
+    .d_4 .add_to_cart, .d_5 .add_to_cart, .d_7 .add_to_cart{
+        top: -38%;
+        left: 10%;
+    }
+    
+}
+@media screen and (max-width: 900px){
+    .details h3{
+        font-size: 1.18em;
+    }
+}
+@media screen and (max-width: 985px) and (min-width: 846px){
+    .d_1 .add_to_cart{
+        top: -45%;
+        left: 10%;
+    }
+    .d_4 .add_to_cart, .d_5 .add_to_cart, .d_7 .add_to_cart{
+        top: -39%;
+        left: 10%;
+    }
+}
+@media screen and (max-width: 845px) {
+    .add_to_cart, .counter{
+        top: -48%;
+        left: 10%;
+    }
+    .d_4 .add_to_cart, .d_7 .add_to_cart{
+        top: -42%;
+        left: 10%;
+    }
+    .d_5 .counter{
+        top: -46%;
+        left: 10%;
+    }
+}
+@media screen and (max-width: 812px) and (min-width: 769px){
+    .d_4 .add_to_cart, .d_7 .add_to_cart{
+        top: -45%;
+        left: 10%;
+    }
+    .d_4 .counter, .d_7 .counter{
+        top: -45%;
+        left: 10%;
+    }
+}
+@media screen and (min-width: 769px){
+    .desserts {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 12px;
+        width: 80vw;
+        height: auto;
+        margin-right: 1vw;
+        overflow: auto; /* Ajoute le défilement automatique uniquement si nécessaire */
+        scrollbar-width: none; /* Firefox : masque les barres de défilement */
+        -ms-overflow-style: none; /* IE 10+ : masque les barres de défilement */
+    }
+    
+    .desserts::-webkit-scrollbar {
+        display: none; /* Chrome, Safari et Edge : masque les barres de défilement */
+    }
+    .cart_impt{
+        height: 70vh !important;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 94vw;
+        height: 100vh;
+        padding-top: 6vh;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        top: 2vh;
+        left: 2vw;
+        overflow: auto; /* Ajoute le défilement automatique uniquement si nécessaire */
+        scrollbar-width: none; /* Firefox : masque les barres de défilement */
+        -ms-overflow-style: none; /* IE 10+ : masque les barres de défilement */
+    }
+    
+    .container::-webkit-scrollbar {
+        display: none; /* Chrome, Safari et Edge : masque les barres de défilement */
+    }
+    .d{
+        height: 60% ;
+    }
+    .add_to_cart{
+        width: 60%;
+        height: 40px;
+        padding: 12px 13px;
+        position: relative;
+        top: -23%;
+        left: 20%;
+    }
+    .counter{
+        width: 60%;
+        height: 40px;
+        padding: 12px 13px;
+        position: relative;
+        top: -23%;
+        left: 20%;
+    }
+    .d_4 .counter, .d_5 .counter, .d_7 .counter{
+        top: -23%;
+        left: 20%;
+    }
+    .d_4 .add_to_cart, .d_7 .add_to_cart{
+        top: -23%;
+        left: 20%;
+    }
+    .details{
+        margin-top: 1.3em;
+    }
+    .desserts_img{
+        width: 100%;
+        height: 80%;
+    }
+    .desserts{
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+        margin-right: 0%;
+        margin-bottom: 8vh;
+    }
+    .desserts_label{
+        position: relative;
+        left: -16vw;
+        top: -1.5vh;
+    }
+    
+    .cart{width: 50vw;
+    }
+
+    .attribution {
+        position: relative;
+        top: 3vh;
+        margin: 0px;
+    }
+    .pop_up{
+        padding: 12px;
+        width: 80vw;
+        height: 90vh;
+    }
+}
+@media screen and (max-width: 690px) {
+    .add_to_cart{
+        position: relative;
+        top: -25%;
+        left: 20%;
+    }
+}
+@media screen and (max-width: 563px) {
+    .add_to_cart{
+        position: relative;
+        top: -27%;
+        left: 20%;
+    }
+    .d_4 .counter, .d_5 .counter, .d_7 .counter{
+        top: -27%;
+        left: 20%;
+    }
+    @keyframes pop_in {
+        0%{
+           position: absolute;
+           left: 50vw;
+           top: 30vh;
+       }
+       100%{
+           position: absolute;
+           left: 50vw;
+           top: 47vh;
+       }
+   }@keyframes pop_out {
+       0%{
+           position: absolute;
+           left: 50vw;
+           top: 47vh;
+       }
+       50%{
+           opacity: 0.6;
+       }
+       100%{
+           position: absolute;
+           left: 50vw;
+           top: 30vh;
+       }
+   }
+}
+@media screen and (max-width: 463px) {
+    .add_to_cart, .counter{
+        position: relative;
+        top: -29%;
+        left: 20%;
+    }
+}
+@media screen and (max-width: 425px) {
+    .d{
+        height: 50% ;
+    }
+    .cart{
+        width: 85vw;
+        height: 45vh;
+    }
+    .desserts_img{
+        width: 100%;
+        height: 80%;
+    }
+    .desserts{
+        width: 85vw;
+        margin-bottom: 8vh;
+    }
+
+    .desserts_label{
+        position: relative;
+        left: -27vw;
+        top: -2vh;
+    }
+    .add_to_cart{
+        position: relative;
+        top: -33%;
+        left: 20%;
+    }
+    .counter{
+        position: relative;
+        top: -33%;
+        left: 20%;
+    }
+    .d_4 .counter, .d_5 .counter, .d_7 .counter{
+        top: -35%;
+        left: 20%;
+    }
+    .d_4 .add_to_cart, .d_7 .add_to_cart{
+        top: -35%;
+        left: 20%;
+    }
+    .details{
+        margin-top: 2em;
+    }
+}
+@media screen and (max-width: 350px) {
+    .add_to_cart{
+        position: relative;
+        top: -35%;
+        left: 20%;
+    }
+    .counter{
+        position: relative;
+        top: -35%;
+        left: 20%;
+    }
+    .d_4 .add_to_cart, .d_5 .add_to_cart, .d_7 .add_to_cart{
+        top: -39%;
+        left: 20%;
+    }
+    .d_4 .counter, .d_5 .counter, .d_7 .counter{
+        top: -39%;
+        left: 20%;
+    }
+    .desserts_label{
+        position: relative;
+        left: -22vw;
+        top: -2vh;
+    }
+}
+@media screen and (max-width: 295px) {
+    .add_to_cart{
+        position: relative;
+        top: -44%;
+        left: 20%;
+    }
+    .d_4 .add_to_cart, .d_7 .add_to_cart{
+        position: relative;
+        top: -44%;
+        left: 20%;
+    }
+    .counter{
+        position: relative;
+        top: -44%;
+        left: 20%;
+    }
+    .d_4 .counter, .d_5 .counter, .d_7 .counter{
+        top: -44%;
+        left: 20%;
+    }
+}
