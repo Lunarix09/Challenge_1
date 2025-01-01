@@ -448,13 +448,6 @@ button[type="submit"]:active{
 .div_2  div span img:hover{
     transform: scale(1.1);
 }
-
-@media screen and (max-width: 1400px){
-    .ticket_infos .ticket{
-        padding: 10px 15%;
-        padding-right: 11%;
-    }
-}
 @media screen and (max-width: 990px){
     .h1_t{
         font-size: 1.9em;
