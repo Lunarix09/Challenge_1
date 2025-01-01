@@ -448,19 +448,18 @@ button[type="submit"]:active{
 .div_2  div span img:hover{
     transform: scale(1.1);
 }
+
 @media screen and (max-width: 990px){
     .h1_t{
         font-size: 1.9em;
     }
     .ticket_infos .ticket{
         padding: 10px 15%;
-        padding-right: 1.16%;
     }
 }
 @media screen and (max-width: 850px){
     .ticket_infos .ticket{
         padding: 10px 10%;
-        paddig-right: 1.15;%
     }
 }
 @media screen and (max-width: 768px){
@@ -477,8 +476,8 @@ button[type="submit"]:active{
         font-size: 1.8em;
     }
     .ticket_infos .ticket{
-        padding: 10px 8%;
-        padding-right: 1%;
+        padding: 10px 12%;
+        padding-right: 8%;
     }
     .div_2  div h5{
         font-size: 0.9em;
@@ -606,7 +605,6 @@ button[type="submit"]:active{
     .ticket_infos .ticket{
         padding: 3px;
         padding-left: 6%;
-        padding-right: 1%;
     }
     .ticket_infos .ticket .div_1{
         margin-bottom: 15px;
