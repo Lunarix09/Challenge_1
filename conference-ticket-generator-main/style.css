@@ -449,6 +449,12 @@ button[type="submit"]:active{
     transform: scale(1.1);
 }
 
+@media screen and (max-width: 1400px){
+    .ticket_infos .ticket{
+        padding: 10px 15%;
+        padding-right: 14%;
+    }
+}
 @media screen and (max-width: 990px){
     .h1_t{
         font-size: 1.9em;
