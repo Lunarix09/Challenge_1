@@ -452,7 +452,7 @@ button[type="submit"]:active{
 @media screen and (max-width: 1400px){
     .ticket_infos .ticket{
         padding: 10px 15%;
-        padding-right: 14%;
+        padding-right: 11%;
     }
 }
 @media screen and (max-width: 990px){
