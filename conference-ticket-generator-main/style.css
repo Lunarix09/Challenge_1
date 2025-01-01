@@ -12,6 +12,13 @@ body{
     background-size: cover;
     overflow: hidden;
 }
+.pattern-circle{
+    position: fixed;
+    top: 45%;
+    right: 12%;
+    width: 20vw;
+    z-index: -3;
+}
 .pattern-lines{
     position: fixed;
     top: 0%;
@@ -566,6 +573,11 @@ button[type="submit"]:active{
         scrollbar-width: none;
         padding-bottom: 3vh;
         padding-top: 2.6vh;
+    }
+    .pattern-circle{
+        right: 10%;
+        width: 45vw;
+        z-index: -1;
     }
     .pattern-squiggly_top{
         width: 35vw;
