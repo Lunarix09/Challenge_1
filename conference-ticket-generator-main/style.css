@@ -1,0 +1,684 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Inconsolata",sans-serif;
+}
+body{
+    background-image: url("images/background-desktop.png");
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+.pattern-lines{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    z-index: -3;
+}
+.pattern-squiggly_bot{
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    width: 80vh;
+    z-index: -2;
+}
+.pattern-squiggly_top{
+    position: fixed;
+    top: 10%;
+    right: 0%;
+    width: 25vw;
+    z-index: -2;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 4vh;
+    left: 15vw;
+    width: 70vw;
+    height: 95vh;
+    overflow: auto;
+    scrollbar-width: none;
+    padding-bottom: 6vh;
+}
+.h3{
+    color: hsl(0, 0%, 100%);
+    align-items: center;
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer; 
+    text-align: center;
+}
+.h3 img{
+    margin-right: 10px;
+    width: 45px;
+    
+}
+.h1, .h1_t{
+    font-size: 2em;
+    color: hsl(0, 0%, 100%);
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.p, .user_infos{
+    color: hsl(252, 6%, 83%);
+    font-weight: 600;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 35px;
+}
+form{
+    width: 55%;
+}
+.form_out{
+    animation: popOut_1  1.6s forwards;
+}
+@keyframes popOut_1{
+    0%{
+        opacity: 0;
+        transform: translate(0,0vh);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0, -100vh);
+    }
+}
+.field_1, .field_2, .field_3, .field_4{
+    margin-bottom: 20px;
+}
+#img_input_field{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 13px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed hsl(252, 6%, 83%);
+    background-color: hsla(245, 19%, 35%, 0.434);
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.6s ease-in-out;
+}
+#img_input_field:focus, #img_input_field:active{
+    outline: 1.5px solid hsl(252, 6%, 83%);
+    outline-offset: 5px;
+}
+#img_input_field:hover{
+    background-color: hsla(245, 19%, 35%, 0.8);
+}
+.img_input_field_hover{
+    background-color: hsla(245, 19%, 35%, 0.8);
+    transform: scale(1.1);
+    outline: 1.5px solid hsl(252, 6%, 83%);
+    outline-offset: 5px;
+}
+#img_input_field p{
+    font-size: 1.2em;
+    font-weight: 600;
+    color: hsl(252, 6%, 83%);
+    text-align: center;
+}
+#img_input_field span{
+    width: 68px;
+    height: 68px;
+    padding: 3px;
+    border-radius: 10px;
+    border: 1.3px solid hsl(245, 15%, 58%);
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(245, 19%, 35%);
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#img_input_field span img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+#img_input{
+    opacity: 0;
+}
+.label{
+    font-size: 1.2em;
+    color: hsl(0, 0%, 100%);
+}
+.label_2{
+    font-size: 1em;
+    color: hsl(252, 6%, 83%);
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.label_2 img{
+    margin-right: 10px;
+}
+.error{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    background: hsl(7, 88%, 67%);
+    background: linear-gradient(180deg, hsl(7, 86%, 67%), hsl(7, 88%, 67%), hsla(0, 0%, 100%, 0.767));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 12px;
+}
+.error img{
+   margin-right: 12px;
+}
+.field_2 input, .field_3 input, .field_4 input{
+    border: 1px solid hsl(252, 6%, 83%);
+    border-radius: 10px;
+    padding: 12px;
+    width: 100%;
+    height: 40px;
+    outline: none;
+    background-color: hsla(245, 19%, 35%, 0.32);
+    color: hsl(0, 0%, 100%);
+    font-size: 1.2em;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.field_2 input::placeholder, .field_3 input::placeholder, .field_4 input::placeholder{
+    color: hsla(252, 6%, 83%, 0.84);
+    font-size: 0.9em;
+    font-weight: 400;
+}
+.field_2 input:focus, .field_3 input:focus, .field_4 input:focus, button:active{
+    outline: invert;
+    outline: 1.5px solid hsl(252, 6%, 83%);
+    outline-offset: 5px;
+}
+.field_2 input:hover, .field_3 input:hover, .field_4 input:hover{
+    background-color: hsla(246, 15%, 58%, 0.507);
+}
+button[type="submit"]{
+    background-color: hsl(7, 71%, 60%);
+    color: hsl(248, 70%, 10%);
+    font-size: 1.1em;
+    border-radius: 13px;
+    padding: 12px;
+    font-weight: 900;
+    width: 100%;
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+}
+button[type="submit"]:hover{
+    box-shadow: 0px 5px 0px hsl(7, 86%, 67%);
+    text-shadow: 0px 1.5px 0px hsla(247, 69%, 10%, 0.772);
+}
+button[type="submit"]:active{
+    background-color: hsl(7, 88%, 67%);
+}
+.remove_btn, .change_btn{
+    background-color: hsla(245, 17%, 26%, 0.47);
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    width: 45%;
+    color: hsl(252, 6%, 83%);
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.remove_btn:hover, .change_btn:hover{
+    background-color: hsl(245, 15%, 58%);
+    box-shadow: 0px 3px 0px hsl(245, 19%, 35%);
+    color: hsl(0, 0%, 100%);
+}
+.remove_btn:active, .change_btn:active{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: hsl(0, 0%, 100%);
+}
+.buttons{
+    display: none;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+}
+.attribution {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: hsl(252, 6%, 83%);
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: justify;
+    flex-wrap: wrap;
+    position: relative;
+    top: 10vh;
+}
+.attribution a {
+    text-decoration: none;
+    color: hsl(7, 88%, 67%);
+    font-weight: 700;
+}
+.downloadImageBtn{
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    color: hsl(7, 88%, 67%);
+    font-weight: 700;
+    width: 60px;
+    position: fixed;
+    top: 2vh;
+    right: 0vw;
+    cursor: pointer;
+}
+.downloadImageBtn:hover{
+    transform: scale(1.1);
+}
+.downloadImageBtn img{
+    width: 40px;
+}
+
+.ticket_infos{
+    display: none;
+    flex-direction: column;
+    width: 90%;
+    height: 150vh;
+    padding-bottom: 10vh;
+    animation: popin_1 1s forwards;
+}
+
+@keyframes popIn_1{
+    0%{
+        opacity: 0;
+        transform: translate(0, 150vh);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+.h1_t{
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.h1_t span{
+    background: linear-gradient(
+        90deg,
+        hsl(7, 86%, 67%) 0%,
+        hsla(7, 88%, 67%, 0.966) 60%,
+        hsl(0, 0%, 100%) 90%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+.user_infos span{
+    color: hsl(7, 86%, 67%);
+}
+.user_infos{
+    margin-bottom: 40px;
+    text-align: center;
+}
+.ticket{
+    background-image: url("images/pattern-ticket.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: all;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    padding-left: 22%;
+    padding-right: 18%;
+    height: 45vh;
+}
+.popIn{
+    display: flex;
+    opacity: 0;
+    animation: popIn 1s forwards;
+}
+@keyframes popIn{
+    0%{
+        opacity: 0;
+        transform: scale(1, 0) rotateX(360deg);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1.1) rotateX(0deg);
+    }
+}
+.ticket .date{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    width: 16%;
+    height: 80%;
+    margin-top: 25px;
+    color: hsl(252, 6%, 83%);
+    font-size: 1.3em;
+    transform: rotate(90deg);
+}
+.ticket .ticket_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+}
+.div_1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.div_1 span{
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    color: hsl(252, 6%, 83%);
+    font-weight: 450;
+}
+.div_1 span h3{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.div_1 img{
+    width: 45px;
+    margin-right: 12px;
+}
+.div_2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.div_2 .span{
+    border-radius: 10px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 90px;
+    margin-right: 15px;
+}
+.div_2  div{
+    display: flex;
+    flex-direction: column;
+}
+.div_2  div h5{
+    font-size: 1.26em;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    margin-right: 9px;
+    margin-bottom: 10px;
+}
+.div_2  div span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 40px;
+}
+.div_2  div span p{
+    font-size: 1.2em;
+    color: hsl(252, 6%, 83%);
+    font-weight: 500;
+}
+.div_2  div span img{
+    width: 100%;
+    margin-right: 12px;
+    cursor: pointer;
+}
+.div_2  div span img:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 990px){
+    .h1_t{
+        font-size: 1.9em;
+    }
+    .ticket_infos .ticket{
+        padding: 10px 15%;
+    }
+}
+@media screen and (max-width: 850px){
+    .ticket_infos .ticket{
+        padding: 10px 10%;
+    }
+}
+@media screen and (max-width: 768px){
+    body{
+        background-image: url("images/background-tablet.png");
+    }
+    .buttons{
+        width: 100%;
+    }
+    .remove_btn, .change_btn{
+        width: 45%;
+    }
+    .h1_t{
+        font-size: 1.8em;
+    }
+    .ticket_infos .ticket{
+        padding: 10px 8%;
+    }
+    .div_2  div h5{
+        font-size: 0.9em;
+        margin-bottom: 5px;
+    }
+    .div_2 .span{
+        width: 60px;
+        height: 60px;
+    }
+    .pattern-squiggly_top{
+        width: 30vw;
+    }
+    .pattern-lines{
+        width: 90%;
+    }
+    .pattern-squiggly_bot{
+        width: 50vw;
+    }
+    form{
+        width: 100%;
+        padding: 6px;
+    }
+    section{
+        left: 10vw;
+        width: 80vw;
+    }
+    button[type="submit"]{
+        width: 98%;
+        margin-left: 1%;
+    }
+}
+@media screen and (max-width: 720px){
+    .remove_btn, .change_btn{
+        padding: 10px;
+    }
+    .ticket_infos .ticket{
+        align-items: center;
+    }
+    .ticket .ticket_content{
+        height: 100%;
+        justify-content: center;
+    }
+    .div_1{
+        margin-bottom: 6em;
+    }
+}
+@media screen and (max-width: 680px){
+    .ticket_infos .ticket{
+        padding-left: 6%;
+        padding-right: 1%;
+        align-items: center;
+    }
+    .ticket .ticket_content{
+        height: 30%;
+    }
+    .div_1{
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 565px){
+    .div_1 span{
+        font-size: 0.8em;
+    }
+    .div_1 span h3{
+        font-size: 1.6em;
+    }
+    .div_2 .span{
+        border-radius: 10px;
+        width: 60px;
+        height: 60px;
+    }   
+    .div_1 img{
+        width: 30px;
+        margin-right: 10px;
+    }
+    .div_2  div h5{
+        font-size: 1.1em;
+    }.div_2  div span p{
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 425px){
+    body{
+        background-image: url("images/background-mobile.png");
+        overflow: scroll;
+        scrollbar-width: none;
+        padding-bottom: 3vh;
+        padding-top: 2.6vh;
+    }
+    .pattern-squiggly_top{
+        width: 35vw;
+    }
+    .pattern-lines{
+        width: 100%;
+    }
+    .pattern-squiggly_bot{
+        width: 66vw;
+    }
+    form{
+        width: 100%;
+        padding: 10px;
+    }
+    section{
+        top: 4vh;
+        left: 3vw;
+        width: 94%;
+    }
+    .h1, .h1_t{
+        font-size: 1.5em;
+    }
+    .p, .user_infos{
+        font-size: 1em;
+    }
+    .label{
+        font-size: 1em;
+    }
+    .ticket .date{
+        font-size: 1em;
+        margin-top: 16px;
+    }
+    .div_2 .span{
+        width: 56px;
+        height: 56px;
+    }
+    .ticket_infos .ticket{
+        padding: 3px;
+        padding-left: 6%;
+    }
+    .ticket_infos .ticket .div_1{
+        margin-bottom: 15px;
+    }
+    .downloadImageBtn img{
+        width: 25px;
+    }
+}
+@media screen and (max-width: 336px){
+    .div_1 span{
+        font-size: 0.7em;
+    }
+    .div_1 span h3{
+        font-size: 1.4em;
+    }
+    .div_2 .span{
+        width: 50px;
+        height: 50px;
+    } 
+    .div_2 div span img{
+        margin-right: 3px;
+    }
+    .div_2  div h5{
+        font-size: 0.86em;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+    .div_2  div span p{
+        font-size: 0.83em;
+    }
+    .downloadImageBtn {
+        top: 6vh;
+        right: 2vh;
+    }
+}
+@media screen and (max-width: 296px){
+    .ticket .date{
+        font-size: 0.7em;
+        margin-top: 10px;
+    }
+    .div_2  div h5{
+        font-size: 0.69em;
+    }
+    .div_1 span h3{
+        font-size: 1.35em;
+        margin-bottom: 2.5px;
+    }
+    .downloadImageBtn {
+        top: 2vh;
+        right: 1vh;
+    }
+}
+@media screen and (max-width: 256px){
+    .div_1 span{
+        font-size: 0.5em;
+    }
+    .div_1 span h3{
+        font-size: 1.25em;
+        margin-bottom: 2.5px;
+    }
+    .div_2 .span{
+        width: 35px;
+        height: 35px;
+    }
+    .div_2  div h5{
+        font-size: 0.63em;
+    }
+    .div_2  div span p{
+        font-size: 0.76em;
+    }
+    .div_1 img{
+        width: 25px;
+        margin-right: 5px;
+    }
+    .downloadImageBtn {
+        top: 3vh;
+    }
+}

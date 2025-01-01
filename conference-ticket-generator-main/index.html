@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Conference ticket generator</title>
+
+</head>
+<body>
+
+  <section>
+    <img class="pattern-lines" src="images/pattern-lines.svg" alt="">
+    <img class="pattern-squiggly_bot" src="images/pattern-squiggly-line-bottom.svg" alt="">
+    <img class="pattern-squiggly_top" src="images/pattern-squiggly-line-top.svg" alt="">
+    <span class="h3"><img src="images/logo-mark.svg" alt="">Coding Conf</span>
+    
+    <h1 class="h1">Your Journey to Coding Conf 2025 Starts Here!</h1>      
+    <p class="p">  Secure your spot at next year's biggest coding conference.</p>
+    
+    <!-- Form starts -->
+    <form class="form" action="" method="post">
+      
+      <label class="label" for="img_input_field">Upload Avatar</label>
+      <div class="field_1">
+        <label for="img_input" id="img_input_field">
+          <span><img src="images/icon-upload.svg" alt=""></span>
+          <p>Drag and drop or click to upload</p>
+          <div class="buttons">
+            <button class="remove_btn">Remove image</button>
+            <button class="change_btn">Change image</button>
+          </div>
+        </label>
+        
+        <label for="img_input_field" class="label_2">
+          <img src="images/icon-info.svg" alt="">
+          Upload your photo (JPG or PNG, max size: 500KB).
+        </label>
+
+        <input type="file" id="img_input">
+      </div>
+
+      <div class="field_2">
+        <label class="label" for="field_name">Full Name</label>
+        <input type="text" id="field_name">
+      </div>
+
+      <div class="field_3">
+        <label class="label" for="field_email">Email Address</label>
+        <input type="email" id="field_email" placeholder="example@email.com">
+        <label for="field_email" class="error"><img src="images/icon-info_error.svg" alt="">Please enter a valid email address.</label>
+      </div>
+        
+      <div class="field_4">
+        <label class="label" for="field_github_name">GitHub Username</label>
+        <input type="text" id="field_github_name" placeholder="@yourusername">
+      </div>
+
+      <button type="submit" class="submit">Generate My Ticket</button>
+    </form>
+  <!-- Form ends -->
+
+  <!-- Generated tickets starts -->
+    <div class="ticket_infos">
+      <div class="h1_t">Congrats, <span></span> ! Your ticket is ready.</div>
+      
+      <div class="user_infos">We've emailed your ticket to <span></span> and will send updates in the run up to the event.
+      </div>
+      
+      <div class="ticket">
+
+        <div class="ticket_content">
+
+          <div class="div_1">
+            <img src="images/logo-mark.svg" alt="">
+            <span><h3 class="h3">Coding Conf</h3>
+              Jan 31, 2025 / Austin, TX
+            </span>
+          </div>
+
+          <div class="div_2">
+            <span class="span"><img src="" alt=""></span>
+            <div>
+              <h5></h5>
+              <span>
+                <img src="images/icon-github.svg" alt=""> 
+                <p></p>
+              </span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="date"></div>
+      </div>
+    </div>
+
+  <!-- Generated tickets ends -->
+  
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/Lunarix09">Lunarix09</a>.
+    </div>
+
+  </section>
+  <script src="script.js" defer></script>
+  <button class="downloadImageBtn" title="Download an avatar test image"><img src="images/download.svg" alt=""></button>
+</body>
+</html>
