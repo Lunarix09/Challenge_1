@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box; 
+    font-family: "Space Mono", sans-serif;  
+}
+body{
+    background-color: hsl(185, 41%, 84%); 
+}
+.text_1{
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 2vh;
+}
+.text_1 span{
+    color: hsl(183, 100%, 15%);
+    letter-spacing: 10px;
+}
+.left_side label{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+label .error{
+    color: hsl(0, 76%, 50%);
+    display: none;
+}
+section{
+    background-color: hsl(0, 0%, 100%);
+    width: 80vw;
+    height: 70vh;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    top: 5vh;
+    left: 10vw;
+}
+.left_side{
+    width: 50%;
+    padding: 12px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.left_side img{
+    width: 15px;
+    height: 20px;
+}
+.left_side label{
+    font-size: 16px;
+    font-weight: 600;
+    color: hsl(183, 100%, 15%);
+}
+.bill_1{
+    width: 100%;
+}
+.bill_1 div{
+    background-color: hsl(189, 41%, 97%);
+    padding: 8px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+#bill{
+    color: hsl(183, 100%, 15%);
+    font-weight: 900;
+    font-size: 22px;
+    border-radius: 6px;
+    width: 90%;
+    outline: none;
+    border: none;
+    text-align: end;
+    background-color: transparent;
+    cursor: pointer;
+}
+.input_error{
+    border: 2px solid hsl(0, 76%, 50%) !important;
+}
+#bill::placeholder{
+    color: hsl(184, 14%, 56%);
+    font-weight: 600;
+    font-size: 20px;
+}
+.tip{
+    margin: 12px 0px;
+}
+#tip_percent{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 6px;
+    width: 100%;
+    margin-top: 6px;
+}
+#tip_percent button{
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    font-size: 22px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+#tip_percent button:hover{
+    background-color: hsl(172, 65%, 75%);
+    color: hsl(183, 100%, 15%);
+}
+#tip_percent button:active{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+.btn_activate{
+    background-color: hsl(172, 75%, 55%) !important;
+    color: hsl(180, 100%, 1%) !important;
+    transition: all 0.2s ease-in-out;
+}
+.btn_5{
+    grid-column: 1;
+    grid-row: 1;
+}
+.btn_10{
+    grid-column: 2;
+    grid-row: 1;
+}
+.btn_15{
+    grid-column: 3;
+    grid-row: 1;
+}
+.btn_25{
+    grid-column: 1;
+    grid-row: 2;
+}
+.btn_50{
+    grid-column: 2;
+    grid-row: 2;
+}
+#custom_btn{
+    grid-column: 3;
+    grid-row: 2;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    font-size: 22px;
+    font-weight: 600;
+    padding: 6px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    text-align: end;
+    cursor: pointer;
+}
+#custom_btn::placeholder{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: hsla(183, 100%, 15%, 0.701);
+}
+#custom_btn:hover, #custom_btn:focus{
+    color: hsl(183, 100%, 15%);
+}
+#custom_btn:focus{
+    border: 2px solid hsl(172, 65%, 75%);
+}
+.people{
+    width: 100%;
+}
+.people div{
+    background-color: hsl(189, 41%, 97%);
+    padding: 8px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+.people #people_nb{
+    color: hsl(183, 100%, 15%);
+    font-weight: 900;
+    font-size: 22px;
+    outline: none;
+    border: none;
+    text-align: end;
+    background-color: transparent;
+    width: 90%;
+    cursor: pointer;
+}
+#people_nb::placeholder{
+    color: hsl(184, 14%, 56%);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.right_side{
+    width: 50%;
+    height: 100%;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 13px;
+    padding: 20px;
+}
+.results{
+    width: 100%;
+    height: 80%;
+    align-items: start;
+    justify-content: space-between;
+}
+.amount, .total{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.amount{
+    margin-bottom: 25px;
+}
+.amount div, .total div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.right_side p{
+    color: hsl(184, 14%, 56%);
+    font-size: 16px;
+    font-weight: 600;
+}
+.right_side .p_1{
+    color: hsl(0, 0%, 100%);
+    font-size: 20px;
+    font-weight: 700;
+}
+.amount span, .total span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: hsl(172, 67%, 45%);
+    font-size: 2.5em;
+    font-weight: 700;
+}
+.right_side h2{
+    font-size: 1.2em;
+}
+.right_side button{
+    color: hsl(183, 100%, 15%);
+    font-size: 22px;
+    font-weight: 600;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    width: 100%;
+    background-color: hsl(186, 58%, 30%);
+    cursor: pointer;
+}
+.right_side button:hover{
+    background-color: hsl(172, 65%, 75%);
+}
+.right_side button:active{
+    background-color: hsl(172, 67%, 45%);
+}
+
+.attribution {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(183, 100%, 15%);
+    gap: 6px;
+    padding: 10px;
+    font-size: 1.1em;
+    text-align: center;
+    flex-wrap: wrap;
+    position: relative;
+    top: 9vh;
+}
+.attribution a {
+    text-decoration: none;
+    font-weight: 700;
+    color: hsl(228, 45%, 44%)
+}
+
+@media screen and (max-width:850px){
+    section{
+        width: 85vw;
+        left: 7.5vw;
+    }
+    .amount span, .total span{
+        font-size: 2.3em;
+    }
+    .right_side h2{
+        font-size: 1.1em;
+    }
+    #custom_btn::placeholder{
+        font-size: 16px;
+    }
+    .right_side button{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 700px){
+    section{
+        width: 85vw;
+        height: 135vh;
+        left: 7.5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .left_side{
+        padding: 12px;
+        margin-bottom: 10px;
+        width: 100%;
+        height: 50%;
+    }
+    .right_side{
+        width: 100%;
+        height: 50%;
+    }
+    .right_side h2{
+        font-size: 1.5em;
+    }
+    .amount span, .total span{
+        font-size: 2.3em;
+    }
+    .right_side button{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:425px){
+    section{
+        width: 96vw;
+        left: 2vw;
+    }
+    .right_side h2{
+        font-size: 1.3em;
+    }
+    .amount span, .total span{
+        font-size: 1.8em;
+    }
+}

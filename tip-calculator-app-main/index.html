@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Tip calculator app</title>
+</head>
+<body>
+
+  <div class="text_1">
+    <span>SPLI</span>
+    <span>TTER</span>
+  </div>
+
+  <section>
+  <!-- left_side -->
+    <div class="left_side">
+
+      <div class="bill_1">
+        <label for="bill">
+          <span>Bill</span>
+          <span class="error">Can't be zero</span>
+        </label>
+        <div>
+          <img src="images/icon-dollar.svg" alt="icon-dollar">
+          <input type="number" min="0" placeholder="0" id="bill">
+        </div>
+      </div>
+
+      <div class="tip">
+        <label for="tip_percent">Select Tip %</label>
+
+        <div id="tip_percent">
+          <button class="btn_5 btn_percent">5%</button>
+          <button class="btn_10 btn_percent" >10%</button>
+          <button class="btn_15 btn_percent">15%</button>
+          <button class="btn_25 btn_percent">25%</button>
+          <button class="btn_50 btn_percent">50%</button>
+
+          <input id="custom_btn" type="number" min="1" step="0.5" placeholder="Custom" title="Custom tip percent %">
+        </div>
+      </div>
+
+      <div class="people">
+        <label for="people_nb">
+          <span>Number of People</span>
+          <span class="error">Can't be zero</span>
+        </label>
+        <div>
+          <img src="images/icon-person.svg" alt="icon-person">
+          <input type="number" min="0" step="1"  placeholder="0" id="people_nb">
+        </div>
+      </div>
+
+    </div>
+
+  <!-- right_side -->
+    <div class="right_side">
+      <div class="results">
+
+        <div class="amount">
+          <div>
+            <p class="p_1">Tip Amount</p>
+            <p>/ person</p>
+          </div>
+          <span>$<h2>0.00</h2></span>
+        </div>
+
+        <div class="total">
+          <div>
+            <p class="p_1">Total</p>
+            <p>/ person</p>
+          </div>
+          <span>$<h2>0.00</h2></span>
+        </div>
+      </div>
+
+      <button class="reset_btn">RESET</button>
+    </div>
+
+  </section>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/Lunarix09">Lunarix09</a>.
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
