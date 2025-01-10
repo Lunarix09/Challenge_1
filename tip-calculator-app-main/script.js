@@ -45,7 +45,7 @@ document.querySelector("#people_nb").addEventListener("input", tip);
 function tip() {
     if (parseFloat(document.querySelector("#bill").value) > 0 && parseInt(document.querySelector("#people_nb").value) > 0) {
         document.querySelector(".amount span h2").innerHTML= ( ( parseFloat(document.querySelector("#bill").value) * (tip_percent / 100) ) / parseFloat(document.querySelector("#people_nb").value) ).toFixed(2);
-        document.querySelector(".total span h2").innerHTML= ( parseFloat(document.querySelector(".amount h2").innerHTML) + parseFloat(document.querySelector("#bill").value) ).toFixed(2);
+        document.querySelector(".total span h2").innerHTML= ( ( parseFloat(document.querySelector(".amount h2").innerHTML) + parseFloat(document.querySelector("#bill").value) ) / parseFloat(document.querySelector("#people_nb").value ) ).toFixed(2);
     }
     setTimeout(() => {
         if (document.querySelector("#bill").value == 0) {
